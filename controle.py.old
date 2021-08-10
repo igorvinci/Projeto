@@ -1,0 +1,20 @@
+from PyQt5 import  uic,QtWidgets
+
+def funcao_principal():
+    linha1 = formulario.lineEdit_2.text()
+    linha2 = formulario.lineEdit_3.text()
+    linha3 = formulario.lineEdit_4.text()
+    linha4 = formulario.lineEdit_5.text()
+
+    print("Cliente:",linha1)
+    print("Telefone",linha2)
+    print("Produto:",linha3)
+    print("Preco",linha4)
+    
+
+app=QtWidgets.QApplication([])
+formulario=uic.loadUi("formulario.ui")
+formulario.pushButton.clicked.connect(funcao_principal)
+
+formulario.show()
+app.exec()
